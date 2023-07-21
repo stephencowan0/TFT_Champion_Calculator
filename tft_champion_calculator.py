@@ -1,3 +1,10 @@
+import numpy as np
+import pandas as pd
+dfLevels = pd.read_csv("levels.csv")
+# more options can be specified also
+with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+    print(dfLevels)
+
 # Creates the dictionary of all commons, setting availibility to 29
 commons = {}
 common_file = open("champion_data/commons.csv", "r")
