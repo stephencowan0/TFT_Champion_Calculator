@@ -116,13 +116,13 @@ level_odds = dfLevels.loc[dfLevels['level'] == level]
 level_odds = level_odds.to_dict(orient='list')
 
 # Get user input for what rarity they want to see
-user_rarity = input("What rarity are you looking for?: ")
+user_rarity = input("What rarity are you looking for?: ").lower()
 level_odds = int(level_odds[user_rarity][0])
 if (user_rarity == "legendary"):
     user_rarity = "legendarie"
 user_rarity = master_dictionary[(user_rarity+'s')]
 # Get user input for what champion they want to see
-user_champion = input("What champion are you looking for?: ")
+user_champion = input("What champion are you looking for?: ").lower().capitalize()
 
 # Calculate the odds of getting a users desired champion
 total_in_current_rarity = 0
